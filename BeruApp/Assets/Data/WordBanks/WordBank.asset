@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0624aac866865404bb7cf69a22e6ee45, type: 3}
   m_Name: WordBank
   m_EditorClassIdentifier: 
-  words: []
+  words:
+  - {fileID: 11400000, guid: 3d8f1cddf88124c45a6bb2a121e5dc6e, type: 2}
