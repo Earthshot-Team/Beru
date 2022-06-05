@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: d
   m_EditorClassIdentifier: 
   character: 98
-  untracedSprite: {fileID: 2800000, guid: ce5b32736ae4b5440aa9399e3d94a158, type: 3}
-  tracedSprite: {fileID: 2800000, guid: a69c124844d4dfe419e5f3f895399e46, type: 3}
+  untracedSprite: {fileID: 2800000, guid: ef28bdc28b05a264080da7a1121dd4c9, type: 3}
+  tracedSprite: {fileID: 2800000, guid: 6cd2e273d5dfd744a96ad8aaa56e2314, type: 3}

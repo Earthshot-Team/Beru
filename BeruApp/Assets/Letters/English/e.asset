@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3b53676738921428a4a841e029cb6f, type: 3}
   m_Name: e
   m_EditorClassIdentifier: 
-  character: 0
-  untracedSprite: {fileID: 0}
-  tracedSprite: {fileID: 0}
+  character: 101
+  untracedSprite: {fileID: 2800000, guid: a56646bcb77774645b3c87d815680850, type: 3}
+  tracedSprite: {fileID: 2800000, guid: 2c15208aa054e7a49a256ca3abc3a94d, type: 3}
