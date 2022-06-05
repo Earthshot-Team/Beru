@@ -35,7 +35,6 @@ public class SceneLoader : MonoBehaviour
     {
         StartCoroutine(TransitionToScene(index));
     }
-    
     public void LoadNextScene()
     {
         StartCoroutine(TransitionToScene(SceneManager.GetActiveScene().buildIndex + 1));
