@@ -20,7 +20,7 @@ public class SceneLoader : MonoBehaviour
         canvasAnimator = canvas.GetComponent<Animator>();
     }
 
-    IEnumerator TransitionToScene(int index)
+    IEnumerator Co_TransitionToScene(int index)
     {
         canvasAnimator.Play("FadeIn");
 
@@ -30,13 +30,17 @@ public class SceneLoader : MonoBehaviour
 
         canvasAnimator.Play("FadeOut");
     }
-
-    public void LoadScene(int index)
+    void TransitionToScene(int index)
     {
-        StartCoroutine(TransitionToScene(index));
+        StartCoroutine(Co_TransitionToScene(index));
+    }
+
+    public void LoadSceneWithIndex(int index)
+    {
+        TransitionToScene(index);
     }
     public void LoadNextScene()
     {
-        StartCoroutine(TransitionToScene(SceneManager.GetActiveScene().buildIndex + 1));
+        TransitionToScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
