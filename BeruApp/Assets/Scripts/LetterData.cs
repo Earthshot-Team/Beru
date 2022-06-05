@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Letter Data", menuName = "Alphabet/Letter", order = 1)]
+[CreateAssetMenu(fileName = "Letter Data", menuName = "Literacy/Letter", order = 1)]
 public class LetterData : ScriptableObject
 {
     public char character;
