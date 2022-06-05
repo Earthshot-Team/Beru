@@ -4,24 +4,44 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-[ExecuteInEditMode]
 public class ScaleTopBarUI : MonoBehaviour
 {
     [SerializeField] private string word;
 
-    [SerializeField] private TextMeshProUGUI text;
+    [Header("Text")]
+    [SerializeField] private RectTransform textTransform;
+    [SerializeField] private TMP_Text textComponent;
 
+    [Header("Text Scaling")]
+    [SerializeField] private float textBuffer = 30f;
+    [SerializeField] private float textSizeY = 75f;
+
+    [Header("Images")]
     [SerializeField] private Image leftLine;
+    private RectTransform leftLineRect;
     [SerializeField] private Image rightLine;
+    private RectTransform rightLineRect;
 
-    void Start()
+    private void Awake()
     {
-        text.text = word;
+        leftLineRect = leftLine.rectTransform;
+        rightLineRect = rightLine.rectTransform;
     }
 
-    void Update()
+    private void Start()
     {
-        text.text = word;
+        textComponent.text = word;
+        ReloadTextBoxSize();
     }
 
+    private void Update()
+    {
+        //leftLineRect.sizeDelta = textTransform.sizeDelta;
+    }
+
+    public void ReloadTextBoxSize()
+    {
+        Vector2 textSize = textComponent.GetPreferredValues(word);
+        textTransform.sizeDelta = new Vector2(textSize.x + (textBuffer * 2), textSizeY);
+    }
 }
