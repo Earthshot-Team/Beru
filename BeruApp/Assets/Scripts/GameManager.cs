@@ -12,26 +12,40 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
 
     private void Start()
     {
-        
+        words = GetXRandomWords(numOfWords);
     }
 
     private void Update()
     {
-        
+
     }
 
     WordData[] GetXRandomWords(int x)
     {
-        /*for (int i = 0; i < numOfWords; i++)
+        if(x > wordBank.words.Length)
         {
-            int rand = Random.Range(0, wordBank.words.Length);
-        }*/
+            Debug.Log("Not Enough Words In Bank", this);
+            return wordBank.words;
+        }
 
-        return wordBank.words;
+        List<WordData> tempList = new List<WordData>();
+
+        for (int i = 0; i < numOfWords; i++)
+        {
+            WordData word = wordBank.GetRandomWord();
+            while (tempList.Contains(word))
+            {
+                word = wordBank.GetRandomWord();
+            }
+
+            tempList.Add(word);
+        }
+
+        return tempList.ToArray();
     }
 }

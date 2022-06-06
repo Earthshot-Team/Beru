@@ -4,4 +4,10 @@ using UnityEngine;
 public class WordBankData : ScriptableObject
 {
     public WordData[] words;
+
+    public WordData GetRandomWord()
+    {
+        int rand = Random.Range(0, words.Length);
+        return words[rand];
+    }
 }
