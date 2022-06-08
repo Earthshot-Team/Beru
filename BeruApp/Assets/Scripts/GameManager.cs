@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Game Settings")]
+
     [SerializeField] private WordBankData wordBank;
-
     [SerializeField] private int numOfWords;
-
     [SerializeField] private WordData[] words;
+
+    [Header("Game Variables")]
+    [SerializeField] private int currentWordIndex = 0;
+    public WordData currentWordData => words[currentWordIndex]; // PROPERTY
 
     private void Start()
     {
