@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // VARIABLES
     [Header("Game Settings")]
 
     [SerializeField] private WordBankData wordBank;
@@ -12,8 +13,11 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Variables")]
     [SerializeField] private int currentWordIndex = 0;
-    public WordData CurrentWordData => words[currentWordIndex]; // PROPERTY
 
+    // PROPERTIES
+    public WordData CurrentWordData => words[currentWordIndex];
+
+    // METHODS
     private void Awake()
     {
         words = GetXRandomWords(numOfWords);

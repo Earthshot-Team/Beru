@@ -6,10 +6,12 @@ using Niantic.ARDK.Extensions;
 
 public class GamePhaseManager : MonoBehaviour, IDoSomethingOnPhaseChange
 {
+    // VARIABLES
     [SerializeField] private GamePhase phase = GamePhase.HuntingForObject;
 
     [SerializeField] private GameObject planeManager;
 
+    // PROPERTIES
     public GamePhase Phase
     {
         get => phase;
@@ -25,6 +27,7 @@ public class GamePhaseManager : MonoBehaviour, IDoSomethingOnPhaseChange
         }
     }
 
+    // METHODS
     public void PhaseChange(GamePhase oldPhase, GamePhase newPhase)
     {
         if(newPhase == GamePhase.HuntingForObject)

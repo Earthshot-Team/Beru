@@ -5,10 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Word Data", menuName = "Literacy/Word", order = 2)]
 public class WordData : ScriptableObject
 {
+    // VARIABLES
     public string word;
 
     public Texture2D icon;
 
+    // METHODS
     public int GetNumOfCharactersInWord()
     {
         return word.Length;

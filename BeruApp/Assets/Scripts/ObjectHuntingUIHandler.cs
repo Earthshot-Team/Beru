@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-// Refactor This Script -> Find better name
 public class ObjectHuntingUIHandler : MonoBehaviour, IDoSomethingOnPhaseChange
 {
+    // VARIABLES
     private GameManager gameManager;
-    
-    public string word => gameManager.CurrentWordData.word.ToUpper();
 
     [Header("Text")]
     [SerializeField] private TMP_Text textComponent;
 
+    // PROPERTIES
+    public string word => gameManager.CurrentWordData.word.ToUpper();
+
+    // METHODS
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();

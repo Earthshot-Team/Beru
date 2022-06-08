@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    // VARIABLES
     [SerializeField] private Canvas canvas;
     [SerializeField] private Animator canvasAnimator;
     [SerializeField] private float animationTime;
 
+    // METHODS
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);

@@ -5,13 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Alphabet Data", menuName = "Literacy/Alphabet", order = 4)]
 public class AlphabetData : ScriptableObject
 {
+    // VARIABLES
     [SerializeField] private LetterData[] _letters; // FIELD
 
+    // PROPERTIES
     public LetterData[] Letters
     {
         get => _letters;
-    } // PROPERTY
+    }
 
+    // METHODS
     public LetterData GetLetterDataFromCharacter(char letter)
     {
         foreach (LetterData letterData in _letters)
