@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Niantic.ARDK.Extensions;
 
 public class GamePhaseManager : MonoBehaviour, IDoSomethingOnPhaseChange
 {
     [SerializeField] private GamePhase _phase = GamePhase.HuntingForObject;
+
+    [SerializeField] private GameObject planeManager;
 
     public GamePhase phase
     {
@@ -24,7 +27,20 @@ public class GamePhaseManager : MonoBehaviour, IDoSomethingOnPhaseChange
 
     public void PhaseChange(GamePhase oldPhase, GamePhase newPhase)
     {
+        if(newPhase == GamePhase.HuntingForObject)
+        {
+            planeManager.GetComponent<ARPlaneManager>().enabled = false;
+        }
 
+        if (newPhase == GamePhase.SearchingForWall)
+        {
+            planeManager.GetComponent<ARPlaneManager>().enabled = true;
+        }
+
+        if (newPhase == GamePhase.TracingLetters)
+        {
+
+        }
     }
 
     public void SetPhase(int phaseNumber)
