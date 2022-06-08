@@ -18,8 +18,13 @@ public class ScaleTopBarUI : MonoBehaviour
 
     private void Start()
     {
-        textComponent.text = word;
+        SetText();
         ReloadTextBoxSize();
+    }
+
+    public void SetText()
+    {
+        textComponent.text = word;
     }
 
     public void ReloadTextBoxSize()

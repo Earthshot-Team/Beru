@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Word Bank Data", menuName = "Literacy/Word Bank", order = 2)]
+[CreateAssetMenu(fileName = "Word Bank Data", menuName = "Literacy/Word Bank", order = 3)]
 public class WordBankData : ScriptableObject
 {
     public WordData[] words;

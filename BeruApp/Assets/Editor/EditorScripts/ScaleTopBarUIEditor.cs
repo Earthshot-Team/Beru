@@ -16,5 +16,12 @@ public class ScaleTopBarUIEditor : Editor
         {
             (target as ScaleTopBarUI).ReloadTextBoxSize();
         }
+
+        GUILayout.Space(5f);
+
+        if (GUILayout.Button("Set Text"))
+        {
+            (target as ScaleTopBarUI).SetText();
+        }
     }
 }

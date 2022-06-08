@@ -10,19 +10,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private WordData[] words;
 
-    private void Awake()
-    {
-
-    }
-
     private void Start()
     {
         words = GetXRandomWords(numOfWords);
-    }
-
-    private void Update()
-    {
-
     }
 
     WordData[] GetXRandomWords(int x)
