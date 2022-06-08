@@ -7,7 +7,7 @@ public class AlphabetData : ScriptableObject
 {
     [SerializeField] private LetterData[] _letters; // FIELD
 
-    public LetterData[] letters
+    public LetterData[] Letters
     {
         get => _letters;
     } // PROPERTY
@@ -16,7 +16,7 @@ public class AlphabetData : ScriptableObject
     {
         foreach (LetterData letterData in _letters)
         {
-            if (letter == letterData.character)
+            if (letter == letterData.Character)
             {
                 return letterData;
             }
@@ -24,6 +24,4 @@ public class AlphabetData : ScriptableObject
 
         return _letters[0];
     }
-
-
 }

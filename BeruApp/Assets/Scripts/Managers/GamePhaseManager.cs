@@ -6,22 +6,22 @@ using Niantic.ARDK.Extensions;
 
 public class GamePhaseManager : MonoBehaviour, IDoSomethingOnPhaseChange
 {
-    [SerializeField] private GamePhase _phase = GamePhase.HuntingForObject;
+    [SerializeField] private GamePhase phase = GamePhase.HuntingForObject;
 
     [SerializeField] private GameObject planeManager;
 
-    public GamePhase phase
+    public GamePhase Phase
     {
-        get => _phase;
+        get => phase;
         set
         {
             // This Kills Performance, But We Will See if it ever becomes a big deal.
             var ss = FindObjectsOfType<MonoBehaviour>().OfType<IDoSomethingOnPhaseChange>();
             foreach (IDoSomethingOnPhaseChange s in ss)
             {
-                s.PhaseChange(_phase, value);
+                s.PhaseChange(phase, value);
             }
-            _phase = value;
+            phase = value;
         }
     }
 
@@ -48,13 +48,13 @@ public class GamePhaseManager : MonoBehaviour, IDoSomethingOnPhaseChange
         switch ((GamePhase)phaseNumber) // turning number into GamePhase state
         {
             case (GamePhase.HuntingForObject):
-                phase = GamePhase.HuntingForObject;
+                Phase = GamePhase.HuntingForObject;
                 break;
             case (GamePhase.SearchingForWall):
-                phase = GamePhase.SearchingForWall;
+                Phase = GamePhase.SearchingForWall;
                 break;
             case (GamePhase.TracingLetters):
-                phase = GamePhase.TracingLetters;
+                Phase = GamePhase.TracingLetters;
                 break;
         }
     }

@@ -9,7 +9,7 @@ public class ObjectHuntingUIHandler : MonoBehaviour, IDoSomethingOnPhaseChange
 {
     private GameManager gameManager;
     
-    public string word => gameManager.currentWordData.word.ToUpper();
+    public string word => gameManager.CurrentWordData.word.ToUpper();
 
     [Header("Text")]
     [SerializeField] private TMP_Text textComponent;

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Variables")]
     [SerializeField] private int currentWordIndex = 0;
-    public WordData currentWordData => words[currentWordIndex]; // PROPERTY
+    public WordData CurrentWordData => words[currentWordIndex]; // PROPERTY
 
     private void Awake()
     {

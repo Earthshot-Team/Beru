@@ -6,11 +6,11 @@ public class LetterData : ScriptableObject
 {
     [SerializeField] private char _character; // FIELD
 
-    public char character
+    public Texture2D untracedSprite;
+    public Texture2D tracedSprite;
+
+    public char Character
     {
         get => char.ToLower(_character);
     } // PROPERTY
-
-    public Texture2D untracedSprite;
-    public Texture2D tracedSprite;
 }
