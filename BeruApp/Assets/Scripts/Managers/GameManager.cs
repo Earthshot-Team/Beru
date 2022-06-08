@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentWordIndex = 0;
     public WordData currentWordData => words[currentWordIndex]; // PROPERTY
 
-    private void Start()
+    private void Awake()
     {
         words = GetXRandomWords(numOfWords);
     }

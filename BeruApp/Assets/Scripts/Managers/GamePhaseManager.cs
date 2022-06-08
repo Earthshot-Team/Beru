@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-// Handles Which Objects / Components are on or off depending on the current phase of the game. Also stores the current Phase of the game.
-public class GamePhaseManager : MonoBehaviour
+public class GamePhaseManager : MonoBehaviour, IDoSomethingOnPhaseChange
 {
     [SerializeField] private GamePhase _phase = GamePhase.HuntingForObject;
 
@@ -12,13 +12,24 @@ public class GamePhaseManager : MonoBehaviour
         get => _phase;
         set
         {
+            // This Kills Performance, But We Will See if it ever becomes a big deal.
+            var ss = FindObjectsOfType<MonoBehaviour>().OfType<IDoSomethingOnPhaseChange>();
+            foreach (IDoSomethingOnPhaseChange s in ss)
+            {
+                s.PhaseChange(_phase, value);
+            }
             _phase = value;
         }
     }
 
+    public void PhaseChange(GamePhase oldPhase, GamePhase newPhase)
+    {
+
+    }
+
     public void SetPhase(int phaseNumber)
     {
-        switch ((GamePhase)phaseNumber) // use upcast, where 0 - first, 1 - second...
+        switch ((GamePhase)phaseNumber) // turning number into GamePhase state
         {
             case (GamePhase.HuntingForObject):
                 phase = GamePhase.HuntingForObject;
