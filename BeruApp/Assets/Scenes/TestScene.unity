@@ -253,6 +253,7 @@ MonoBehaviour:
   alphabet: {fileID: 11400000, guid: a89d25bd333f5fe4d8508f9509b30762, type: 2}
   bufferBtwLetters: 1
   instantiatePos: {x: 0, y: 0, z: 0}
+  myLetters: []
 --- !u!1 &2130117038
 GameObject:
   m_ObjectHideFlags: 0
