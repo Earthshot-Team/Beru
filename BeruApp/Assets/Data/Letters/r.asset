@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3b53676738921428a4a841e029cb6f, type: 3}
   m_Name: r
   m_EditorClassIdentifier: 
-  character: 114
-  untracedSprite: {fileID: 2800000, guid: dd8d449b4417d2242a04e4858c2b79bd, type: 3}
-  tracedSprite: {fileID: 2800000, guid: f4d63dd901cb7c54dbb4b5a2682030b4, type: 3}
+  _character: 114
+  untracedTexture: {fileID: 2800000, guid: dd8d449b4417d2242a04e4858c2b79bd, type: 3}
+  tracedTexture: {fileID: 2800000, guid: f4d63dd901cb7c54dbb4b5a2682030b4, type: 3}

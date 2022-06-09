@@ -6,9 +6,15 @@ using UnityEngine;
 public class WordData : ScriptableObject
 {
     // VARIABLES
-    public string word;
+    [SerializeField] private string word;
 
     public Texture2D icon;
+
+    // PROPERTIES
+    public string Word
+    {
+        get => word.ToLower();
+    }
 
     // METHODS
     public int GetNumOfCharactersInWord()

@@ -6,7 +6,7 @@ using UnityEngine;
 public class AlphabetData : ScriptableObject
 {
     // VARIABLES
-    [SerializeField] private LetterData[] _letters; // FIELD
+    [SerializeField] private LetterData[] _letters;
 
     // PROPERTIES
     public LetterData[] Letters

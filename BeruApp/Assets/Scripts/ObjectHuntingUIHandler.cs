@@ -13,7 +13,7 @@ public class ObjectHuntingUIHandler : MonoBehaviour, IDoSomethingOnPhaseChange
     [SerializeField] private TMP_Text textComponent;
 
     // PROPERTIES
-    public string word => gameManager.CurrentWordData.word.ToUpper();
+    public string word => gameManager.CurrentWordData.Word.ToUpper();
 
     // METHODS
     private void Awake()

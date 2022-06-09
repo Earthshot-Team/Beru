@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WordBankData wordBank;
     [SerializeField] private int numOfWords;
     [SerializeField] private WordData[] words;
+    [SerializeField] private AlphabetData language;
 
     [Header("Game Variables")]
     [SerializeField] private int currentWordIndex = 0;
 
     // PROPERTIES
     public WordData CurrentWordData => words[currentWordIndex];
+    public AlphabetData Language { get => language; }
 
     // METHODS
     private void Awake()
